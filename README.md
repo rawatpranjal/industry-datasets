@@ -106,6 +106,9 @@ https://www.kaggle.com/datasets/marcio486/sales-data-for-a-chain-of-brazilian-st
 - Dominiks Soft drinks - 
 https://www.chicagobooth.edu/research/kilts/research-data/dominicks
 
+## Financial Transactions
+- Hashed Multimodal Banking Transactions and Product Purchase - https://github.com/dzhambo/mbd
+
 ## Fashion
 - Indonesian Fashion - https://www.kaggle.com/datasets/latifahhukma/fashion-campus
 - Diginetica Fashion - https://competitions.codalab.org/competitions/11161
@@ -168,6 +171,9 @@ Supply-side data on delivery, logistics, freight, etc.
 - DataCo - https://tianchi.aliyun.com/dataset/89959
 - Drone Delivery - https://tianchi.aliyun.com/dataset/89726
 - Brewery Operations - https://www.kaggle.com/datasets/ankurnapa/brewery-operations-and-market-analysis-dataset
+
+## Driving and Mobility
+- Natural Driving in Ohio - https://data.transportation.gov/Automobiles/Advanced-Driver-Assistance-System-ADAS-Equipped-Si/iie8-uenj/about_data
 
 ## Housing and Residential Prices
 Data from property assessment agencies typically containing house prices and transactions or rental bookings
