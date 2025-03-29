@@ -172,9 +172,11 @@ Supply-side data on delivery, logistics, freight, etc.
 - Drone Delivery - https://tianchi.aliyun.com/dataset/89726
 - Brewery Operations - https://www.kaggle.com/datasets/ankurnapa/brewery-operations-and-market-analysis-dataset
 
-## Driving and Mobility
+## Driving, Mobility, GPS Traces
 - Natural Driving in Ohio - https://data.transportation.gov/Automobiles/Advanced-Driver-Assistance-System-ADAS-Equipped-Si/iie8-uenj/about_data
-
+- NGSIM - https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Vehicle-Trajector/8ect-6jqj/about_data
+- Grab Driving GPS Traces - https://engineering.grab.com/grab-posisi
+- 
 ## Housing and Residential Prices
 Data from property assessment agencies typically containing house prices and transactions or rental bookings
 
