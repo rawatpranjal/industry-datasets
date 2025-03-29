@@ -14,15 +14,18 @@ A curated list of business datasets from the fields of Machine Learning, Marketi
 - Shopee - https://www.kaggle.com/datasets/davydev/shopee-code-league-20
 - Flipkart - https://www.kaggle.com/datasets/iyumrahul/flipkartsalesdataset?select=Sales.csv
 - Pakistan e-commerce - https://www.kaggle.com/datasets/zusmani/pakistans-largest-ecommerce-dataset
-
+- Instacart - https://mdporter.github.io/DS6030/other/instacart.html#:~:text=,measure%20of%20time%20between%20orders
+- 
 ## A/B Tests and Experiments
-- Upworthy News Headlines - https://upworthy.natematias.com/
+- Upworthy News Headlines (Giant collection) - https://upworthy.natematias.com/
 - ASSISTments Dataset - https://sites.google.com/site/las2016data/home?authuser=0
 - Gamified Learning - https://www.sciencedirect.com/science/article/pii/S2352340917301646#s0010
 - Collection - https://github.com/gsbDBI/ExperimentData
 - Athey's course - https://github.com/itamarcaspi/experimentdatar/tree/master
 - Development - https://www.pep-net.org/publications/datasets/experimental-research-datasets
 - Computational Neuroscience - https://crcns.org/
+- Open Bandit data - https://github.com/st-tech/zr-obp
+- ASOS experiments for adaptive stopping rules - https://www.kaggle.com/datasets/marinazmieva/asos-digital-experiments-dataset?select=document.pdf
     
 ## Browsing and Search
 Browsing and search logs that may not have prices, purchases, or both. 
@@ -131,7 +134,8 @@ Travel bookings and transactions.
 - Fliggy Transfers - https://tianchi.aliyun.com/dataset/140721
 - Expedia - https://www.kaggle.com/datasets/vijeetnigam26/expedia-hotel
 - Trivago Travel - https://recsys.trivago.cloud/challenge/dataset/
-
+- Airline delay - https://www.kaggle.com/datasets/sriharshaeedala/airline-delay
+  
 ## Music
 - NetEase Music - https://connect.informs.org/rmp/awards/data-competition
 - Spotify - https://research.atspotify.com/datasets/
@@ -171,7 +175,8 @@ Supply-side data on delivery, logistics, freight, etc.
 - DataCo - https://tianchi.aliyun.com/dataset/89959
 - Drone Delivery - https://tianchi.aliyun.com/dataset/89726
 - Brewery Operations - https://www.kaggle.com/datasets/ankurnapa/brewery-operations-and-market-analysis-dataset
-
+- Shipping and Pricing - https://catalog.data.gov/dataset/supply-chain-shipment-pricing-data-07d29#:~:text=This%20dataset%20provides%20supply%20chain,data%20are%20particularly%20valuable%20for
+  
 ## Driving, Mobility, GPS Traces
 - Natural Driving in Ohio - https://data.transportation.gov/Automobiles/Advanced-Driver-Assistance-System-ADAS-Equipped-Si/iie8-uenj/about_data
 - NGSIM - https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Vehicle-Trajector/8ect-6jqj/about_data
