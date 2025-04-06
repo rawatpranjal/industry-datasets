@@ -15,7 +15,7 @@ A curated list of business datasets from the fields of Machine Learning, Marketi
 - Flipkart - https://www.kaggle.com/datasets/iyumrahul/flipkartsalesdataset?select=Sales.csv
 - Pakistan e-commerce - https://www.kaggle.com/datasets/zusmani/pakistans-largest-ecommerce-dataset
 - Instacart - https://mdporter.github.io/DS6030/other/instacart.html#:~:text=,measure%20of%20time%20between%20orders
-- 
+  
 ## A/B Tests and Experiments
 - Upworthy News Headlines (Giant collection) - https://upworthy.natematias.com/
 - ASSISTments Dataset - https://sites.google.com/site/las2016data/home?authuser=0
@@ -24,7 +24,6 @@ A curated list of business datasets from the fields of Machine Learning, Marketi
 - Athey's course - https://github.com/itamarcaspi/experimentdatar/tree/master
 - Development - https://www.pep-net.org/publications/datasets/experimental-research-datasets
 - Computational Neuroscience - https://crcns.org/
-- Open Bandit data - https://github.com/st-tech/zr-obp
 - ASOS experiments for adaptive stopping rules - https://www.kaggle.com/datasets/marinazmieva/asos-digital-experiments-dataset?select=document.pdf
     
 ## Browsing and Search
