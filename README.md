@@ -1,4 +1,4 @@
-# Business Datasets
+# Industry Datasets
 A curated list of business datasets from the fields of Machine Learning, Marketing, Economics, Transporation, Operations, and Computer Science. 
 
 ## General e-Commerce
