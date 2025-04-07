@@ -1,6 +1,6 @@
 # Industry Datasets
 
-A curated list of business datasets from the fields of Machine Learning, Marketing, Economics, Transporation, Operations, and Computer Science.
+A curated list of business datasets from the fields of Machine Learning, Marketing, Economics, Transportation, Operations, and Computer Science.
 
 ## Contents
 
