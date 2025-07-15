@@ -4,6 +4,7 @@ A curated list of business datasets from the fields of Machine Learning, Marketi
 
 ## Contents
 
+- [LLM Interaction Datasets with Sequential Feedback](#llm-interaction)
 - [General e-Commerce](#general-e-commerce)
 - [A/B Tests and Experiments](#ab-tests-and-experiments)
 - [Browsing and Search](#browsing-and-search)
@@ -26,6 +27,16 @@ A curated list of business datasets from the fields of Machine Learning, Marketi
 - [Others](#others)
 
 ---
+
+## LLM Interaction Datasets with Sequential Feedback
+
+| Dataset | Description | Interaction Type | Sequential Features | Quality Assessment | Size | URL |
+|---------|-------------|------------------|-------------------|-------------------|------|-----|
+| **LMSYS-Chat-1M** | 1M real-world conversations with 25 state-of-the-art LLMs collected from 210K unique IP addresses in wild settings, featuring extensive content moderation and safety annotations | Content moderation API tags, safety classifications | High-quality curation with avg 2.0 turns | **★★★★★** Research-validated at ICLR 2024, rigorous PII removal, comprehensive topic coverage (154 languages), established benchmark quality | 1M conversations | [Source](https://huggingface.co/datasets/lmsys/lmsys-chat-1m) |
+| **DiQAD (Dialogue Quality Assessment Dataset)** | 100K real-world user dialogues with comprehensive 6-dimension quality assessment: grammaticality, relevance, consistency, empathy, proactivity, informativeness | Quality scores (0-2) across 6 dimensions | Medium-long conversations (avg 8 turns) | **★★★★★** Published at EMNLP 2023, rigorous human annotation with expert inter-annotator agreement, comprehensive quality framework | 100K dialogues | [Source](https://github.com/yukunZhao/Dataset_Dialogue_quality_evaluation) |
+| **USS (User Satisfaction Simulation)** | 6,800 dialogues with 5-level satisfaction scale labels spanning multiple domains including e-commerce, task-oriented, and recommendation systems | 5-level satisfaction scale (1-5) per utterance and dialogue | Very long conversations (avg 32.3 turns JDDC) | **★★★★★** Research-validated with high inter-annotator agreement (Fleiss Kappa 0.574), multi-domain coverage, established baselines | 6.8K dialogues | [Source](https://github.com/sunnweiwei/user-satisfaction-simulation) |
+| **ConvAI Dataset** | 4,750 human-to-bot dialogues with thumbs up/down feedback after each utterance plus dialogue-level quality scores across 3 dimensions (engagement, breadth, overall quality) | Thumbs up/down per utterance + dialogue quality (1-5) | Medium-long conversations (avg 10.5 turns) | **★★★★☆** Well-documented annotation process, established research benchmark, strong correlation between quality metrics (r=0.86-0.87) | 4.75K dialogues | [Source](http://convai.io/2017/data/dataset_description.pdf) |
+| **Arena Human Preference (55K)** | 55K+ real-world conversations with human preference labels from Chatbot Arena, featuring pairwise model comparisons and user vote data | Pairwise preferences with user votes | Short-medium conversations with preference signals | **★★★★☆** High-quality real-world data from established platform, used in Kaggle competition, diverse model coverage | 55K+ conversations | [Source](https://huggingface.co/datasets/lmarena-ai/arena-human-preference-55k) |
 
 ## General e-Commerce
 
