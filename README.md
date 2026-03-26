@@ -4,39 +4,48 @@ A curated list of business datasets from the fields of Machine Learning, Marketi
 
 ## Contents
 
-- [LLM Interaction Datasets with Sequential Feedback](#llm-interaction)
+- [LLM Interaction Datasets with Sequential Feedback](#llm-interaction-datasets-with-sequential-feedback)
 - [General e-Commerce](#general-e-commerce)
 - [A/B Tests and Experiments](#ab-tests-and-experiments)
 - [Browsing and Search](#browsing-and-search)
 - [Video Search and Recommendation](#video-search-and-recommendation)
+- [Video Engagement](#video-engagement)
+- [News and Media](#news-and-media)
 - [Product and Reviews](#product-and-reviews)
 - [Sales and Forecasting](#sales-and-forecasting)
 - [Supermarkets and Grocery](#supermarkets-and-grocery)
 - [Financial Transactions](#financial-transactions)
 - [Fashion](#fashion)
 - [Cars and Used Cars](#cars-and-used-cars)
+- [Discrete Economic Choices](#discrete-economic-choices)
 - [Travel](#travel)
 - [Music](#music)
 - [Procurement and Online Auctions](#procurement-and-online-auctions)
 - [Display Advertising and Sponsered Search Auctions](#display-advertising-and-sponsered-search-auctions)
+- [Healthcare](#healthcare)
 - [Logistics](#logistics)
 - [Driving, Mobility, GPS Traces](#driving-mobility-gps-traces)
+- [Human Trajectories](#human-trajectories)
+- [Check-in and Location Data](#check-in-and-location-data)
 - [Housing and Residential Prices](#housing-and-residential-prices)
 - [Research Datasets and Collections](#research-datasets-and-collections)
 - [Competitions](#competitions)
+- [Gaming](#gaming)
 - [Others](#others)
 
 ---
 
 ## LLM Interaction Datasets with Sequential Feedback
 
-| Dataset | Description | Interaction Type | Sequential Features | Quality Assessment | Size | URL |
-|---------|-------------|------------------|-------------------|-------------------|------|-----|
-| **LMSYS-Chat-1M** | 1M real-world conversations with 25 state-of-the-art LLMs collected from 210K unique IP addresses in wild settings, featuring extensive content moderation and safety annotations | Content moderation API tags, safety classifications | High-quality curation with avg 2.0 turns | **★★★★★** Research-validated at ICLR 2024, rigorous PII removal, comprehensive topic coverage (154 languages), established benchmark quality | 1M conversations | [Source](https://huggingface.co/datasets/lmsys/lmsys-chat-1m) |
-| **DiQAD (Dialogue Quality Assessment Dataset)** | 100K real-world user dialogues with comprehensive 6-dimension quality assessment: grammaticality, relevance, consistency, empathy, proactivity, informativeness | Quality scores (0-2) across 6 dimensions | Medium-long conversations (avg 8 turns) | **★★★★★** Published at EMNLP 2023, rigorous human annotation with expert inter-annotator agreement, comprehensive quality framework | 100K dialogues | [Source](https://github.com/yukunZhao/Dataset_Dialogue_quality_evaluation) |
-| **USS (User Satisfaction Simulation)** | 6,800 dialogues with 5-level satisfaction scale labels spanning multiple domains including e-commerce, task-oriented, and recommendation systems | 5-level satisfaction scale (1-5) per utterance and dialogue | Very long conversations (avg 32.3 turns JDDC) | **★★★★★** Research-validated with high inter-annotator agreement (Fleiss Kappa 0.574), multi-domain coverage, established baselines | 6.8K dialogues | [Source](https://github.com/sunnweiwei/user-satisfaction-simulation) |
-| **ConvAI Dataset** | 4,750 human-to-bot dialogues with thumbs up/down feedback after each utterance plus dialogue-level quality scores across 3 dimensions (engagement, breadth, overall quality) | Thumbs up/down per utterance + dialogue quality (1-5) | Medium-long conversations (avg 10.5 turns) | **★★★★☆** Well-documented annotation process, established research benchmark, strong correlation between quality metrics (r=0.86-0.87) | 4.75K dialogues | [Source](http://convai.io/2017/data/dataset_description.pdf) |
-| **Arena Human Preference (55K)** | 55K+ real-world conversations with human preference labels from Chatbot Arena, featuring pairwise model comparisons and user vote data | Pairwise preferences with user votes | Short-medium conversations with preference signals | **★★★★☆** High-quality real-world data from established platform, used in Kaggle competition, diverse model coverage | 55K+ conversations | [Source](https://huggingface.co/datasets/lmarena-ai/arena-human-preference-55k) |
+Datasets capturing multi-turn dialogues with LLMs, including quality feedback and preference signals.
+
+| Dataset              | Description                                                                                                                                                       | URL                                                                 |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| **LMSYS-Chat-1M** | 1M real-world conversations with 25 LLMs from 210K unique IPs in 154 languages, with content moderation and safety annotations. Avg 2.0 turns per conversation with rigorous PII removal; research-validated at ICLR 2024. | [Source](https://huggingface.co/datasets/lmsys/lmsys-chat-1m) |
+| **DiQAD** | 100K real-world user dialogues with 6-dimension quality assessment (grammaticality, relevance, consistency, empathy, proactivity, informativeness) scored 0-2. Avg 8 turns per conversation; published at EMNLP 2023 with expert inter-annotator agreement. | [Source](https://github.com/yukunZhao/Dataset_Dialogue_quality_evaluation) |
+| **USS** | 6,800 dialogues with 5-level satisfaction labels spanning e-commerce, task-oriented, and recommendation domains. Very long conversations (avg 32.3 turns); research-validated with high inter-annotator agreement (Fleiss Kappa 0.574). | [Source](https://github.com/sunnweiwei/user-satisfaction-simulation) |
+| **ConvAI Dataset** | 4,750 human-to-bot dialogues with per-utterance thumbs up/down feedback and dialogue-level quality scores across engagement, breadth, and overall quality (1-5). Avg 10.5 turns; strong metric correlations (r=0.86-0.87). | [Source](http://convai.io/2017/data/dataset_description.pdf) |
+| **Arena Human Preference (55K)** | 55K+ real-world conversations with human preference labels from Chatbot Arena, featuring pairwise model comparisons and user votes. Used in Kaggle competition with diverse model coverage. | [Source](https://huggingface.co/datasets/lmarena-ai/arena-human-preference-55k) |
 
 ## General e-Commerce
 
@@ -57,6 +66,8 @@ Datasets focusing on online retail transactions, customer behavior, and product 
 | **Flipkart**         | Sales dataset from the Indian e-commerce platform Flipkart.                                                                                                      | [Source](https://www.kaggle.com/datasets/iyumrahul/flipkartsalesdataset?select=Sales.csv) |
 | **Pakistan e-commerce**| Largest retail e-commerce dataset from Pakistan: 500k+ transactions (Mar 2016 - Aug 2018).                                                                       | [Source](https://www.kaggle.com/datasets/zusmani/pakistans-largest-ecommerce-dataset) |
 | **Instacart**        | 3.4M orders, 206k+ users, 49k+ products (134 aisles, 21 depts), order timing, prior orders. Avg reorder ~59%. (More detailed view).                               | [Source](https://mdporter.github.io/DS6030/other/instacart.html#:~:text=,measure%20of%20time%20between%20orders) |
+| **YOOCHOOSE RecSys 2015** | Session-based click and purchase events from a European e-commerce retailer, used in the RecSys Challenge 2015 for session-based recommendation research. | [Source](https://www.kaggle.com/datasets/chadgostopp/recsys-challenge-2015) |
+| **Open E-Commerce 1.0 (MIT)** | 1.8M Amazon purchase records with demographic attributes (age, gender, location), enabling research on consumer behavior across population segments. | [Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YGLYDY) |
 
 ---
 
@@ -104,6 +115,7 @@ Logs detailing user navigation, search queries, and clicks, potentially without 
 | **Alibaba User Behavior 2018**| 649M user interactions (clicks, carts, buys) on 25M items over 9 days (2017), CTR, dwell times. (15 structured columns: user profiles, item positions, predicted metrics). | [Source](https://tianchi.aliyun.com/dataset/649)                             |
 | **Alibaba Personalized Re-Ranking** | Mobile shopping user click data on recommended items (30 per instance), item features, user interactions.                                         | [Source](http://yongfeng.me/dataset/)                                         |
 | **Online Shopping Intention** | 12,330 user sessions (1 year), 10 numerical (page metrics, bounce/exit rates, page values, special day proximity) & 8 categorical attributes (OS, browser, traffic type, visitor type, weekend flag, revenue). | [Source](https://www.kaggle.com/datasets/henrysue/online-shoppers-intention) |
+| **Yandex Personalized Web Search** | Large-scale search log dataset with 35M queries from 5.7M users, featuring click-through data and user session information for personalized search ranking. | [Source](https://www.kaggle.com/c/yandex-personalized-web-search-challenge) |
 
 ---
 
@@ -115,6 +127,31 @@ User interaction data specifically related to online video platforms.
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | **MicroLens** | Micro-video recommendation dataset with 1 billion interactions from 34 million users on 1 million videos, including raw multimodal data (titles, audio, full videos). | [Source](https://github.com/westlake-repl/MicroLens) |
 | **KuaiSAR**   | Unified Search And Recommendation dataset from Kuaishou: 5M search actions, 14.6M recommendation events from 25k users over 19 days (8 interaction types).        | [Source](https://kuaisar.github.io/)              |
+
+---
+
+## Video Engagement
+
+Datasets measuring viewer engagement, attention, and emotional response to video content.
+
+| Dataset              | Description                                                                                                                                                       | URL                                                                 |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| **System1's Video Advertisement** | 30K+ video ads with 2.3M emotional annotations across 8 categories, using 5-second clips analyzed for viewer-reported emotional engagement via sliding window techniques. | [Source](https://www.nature.com/articles/s41598-024-76968-9) |
+| **Snapchat UGC Short Video** | 90K short videos with multi-modal features (visual, audio, text), measuring engagement via Normalized Average Watch Percentage and Engagement Continuation Rate. | [Source](https://arxiv.org/abs/2410.00289) |
+| **Micro-video Engagement** | Large-scale dataset capturing user-video interactions with skip timestamps, providing fine-grained analysis of skip vs. non-skip behaviors on short video platforms. | [Source](https://fi.ee.tsinghua.edu.cn/~gaochen/papers/SIGIR2023.pdf) |
+| **EEG-SVRec** | 3,657 user interactions combining EEG brain signals with engagement labels to study affective experiences during video recommendations. | [Source](https://arxiv.org/abs/2404.01008) |
+| **Engagement for Online Meetings** | 24 long-form online meetings (~1.5 hours each) with facial recordings and physiological cues for analyzing participant engagement and group dynamics. | [Source](https://arxiv.org/html/2404.04394v1) |
+
+---
+
+## News and Media
+
+Datasets related to news consumption, media recommendations, and content engagement.
+
+| Dataset              | Description                                                                                                                                                       | URL                                                                 |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| **MIND (Microsoft News Dataset)** | Large-scale news recommendation dataset with 1M+ users and 160K+ English news articles, including click logs, impressions, and article content for personalization research. | [Source](https://msnews.github.io/) |
+| **ContentWise Impressions** | Interaction logs from an OTT media service with 10M+ impressions, explicit and implicit user feedback, and recommendation context for evaluating recommendation algorithms. | [Source](https://github.com/ContentWise/contentwise-impressions) |
 
 ---
 
@@ -143,7 +180,7 @@ Datasets focused on individual or aggregate sales data, primarily for time-serie
 | Dataset             | Description                                                                                                  | URL                                                                                           |
 |---------------------|--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | **Wallmart (M5)**   | Hierarchical sales data (unit sales) for 3,049 products across 10 Walmart stores (CA, TX, WI) used in the M5 forecasting competition. | [Source](https://www.kaggle.com/competitions/m5-forecasting-accuracy/)                         |
-| **Ecuador Grocery** | Unit sales data (Corporación Favorita, Ecuador), store/item metadata (type, cluster, family, perishable), transactions, oil prices, events. Favorita Grocery Sales Forecasting competition. | [Source](https://www.kaggle.com/competitions/favorita-grocery-sales-forecasting/data)          |
+| **Ecuador Grocery** | Unit sales data (Corporacion Favorita, Ecuador), store/item metadata (type, cluster, family, perishable), transactions, oil prices, events. Favorita Grocery Sales Forecasting competition. | [Source](https://www.kaggle.com/competitions/favorita-grocery-sales-forecasting/data)          |
 | **Ukraine ecommerce** | E-commerce sales data from the Fozzy Group retail chain in Ukraine, used for Hack4Retail competition.      | [Source](https://www.kaggle.com/datasets/picklenik/fozzy-group-hack4retail/data)                |
 | **Office Supplies** | Dataset related to office supply sales, used for a data mining workshop challenge (DMDA 2023).               | [Source](https://sites.google.com/view/dmdaworkshop2023/data-challenge)                         |
 | **Brazilian Drugs** | Sales data for controlled substances (drugs) in Brazil, reported by ANVISA (National Health Surveillance Agency). | [Source](https://www.kaggle.com/datasets/tiagoacardoso/venda-medicamentos-controlados-anvisa) |
@@ -186,6 +223,7 @@ Datasets focusing on banking transactions or financial product purchases.
 | Dataset                                       | Description                                                          | URL                                       |
 |-----------------------------------------------|----------------------------------------------------------------------|-------------------------------------------|
 | **Hashed Multimodal Banking Transactions**    | Dataset containing hashed banking transactions and product purchases. | [Source](https://github.com/dzhambo/mbd) |
+| **IEEE-CIS Fraud Detection** | 590K+ payment transactions with identity and device features from the IEEE-CIS Kaggle competition for fraud detection research. | [Source](https://www.kaggle.com/competitions/ieee-fraud-detection) |
 
 ---
 
@@ -216,6 +254,18 @@ Market-level or transaction data related to new and used automobiles.
 
 ---
 
+## Discrete Economic Choices
+
+Datasets used in structural econometric models of discrete decision-making under uncertainty.
+
+| Dataset              | Description                                                                                                       | URL                                                                 |
+|----------------------|-------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| **Career Decisions of Young Men** | NLSY panel data tracking young men's educational and occupational choices over time, widely used for dynamic discrete choice estimation (Keane & Wolpin 1997). | [Source](https://github.com/lindamaok899/student-project-lindamaok899) |
+| **Bus Engine Replacement Data** | Harold Zurcher's bus engine mileage and replacement decisions, the canonical dataset for dynamic discrete choice models (Rust 1987). | [Source](https://www.kaggle.com/datasets/erichschulman/bus1234.csv) |
+| **The Discrete Choice Data Bank** | Curated collection of publicly available discrete choice datasets spanning transport, health economics, energy, and consumer behavior. | [Source](https://github.com/alvarogutyerrez/TheDiscreteChoiceDataBank) |
+
+---
+
 ## Travel
 
 Data related to travel bookings, transactions, delays, and recommendations.
@@ -227,6 +277,11 @@ Data related to travel bookings, transactions, delays, and recommendations.
 | **Expedia**       | Hotel booking or search data from Expedia, often used for recommendation or ranking tasks.          | [Source](https://www.kaggle.com/datasets/vijeetnigam26/expedia-hotel) |
 | **Trivago Travel**| Dataset released for a RecSys challenge by Trivago, involving user interactions with hotel listings. | [Source](https://recsys.trivago.cloud/challenge/dataset/)           |
 | **Airline delay** | Data on airline flight delays, including carriers, origins, destinations, and delay times.         | [Source](https://www.kaggle.com/datasets/sriharshaeedala/airline-delay) |
+| **SwissMetro** | Stated preference survey of 1,192 respondents choosing between rail, car, and the hypothetical SwissMetro for intercity travel in Switzerland, a canonical dataset for discrete choice modeling. | [Source](https://biogeme.epfl.ch/data.html) |
+| **LPMC (London Passenger Mode Choice)** | Revealed preference dataset of 81K+ trips in London with mode choices (walk, cycle, drive, bus, rail) and detailed trip attributes for transport demand modeling. | [Source](https://biogeme.epfl.ch/data.html) |
+| **Chicago TNC Trips** | Publicly released ride-hailing trip records from the City of Chicago, including pickup/dropoff areas, timestamps, fares, and trip durations. | [Source](https://data.cityofchicago.org/Transportation/Transportation-Network-Providers-Trips-2018-2022-/m6dm-c72p) |
+| **Uber Movement** | Aggregated travel time and speed data across major global cities, derived from Uber trip data for urban transportation analysis and planning. | [Source](https://movement.uber.com/) |
+| **TrajAir** | General aviation trajectory dataset capturing aircraft operations around a non-towered airport, with recorded trajectories and corresponding weather conditions. | [Source](https://theairlab.org/trajair/) |
 
 ---
 
@@ -275,6 +330,20 @@ Bidding logs and ad clickstream data from online advertising platforms.
 | **Display Advertising** | Real-time advertiser auction dataset, likely containing bid requests and outcomes.                         | [Source](https://www.kaggle.com/datasets/saurav9786/real-time-advertisers-auction)                                                                |
 | **ICPSR**               | Search results for auction-related studies within the ICPSR data archive.                                  | [Source](https://www.openicpsr.org/openicpsr/search/studies?start=0&ARCHIVE=openicpsr&sort=score%20desc%2CDATEUPDATED%20desc&rows=25&q=auction) |
 | **Replication Data (Harvard)** | Search results for auction-related replication datasets on Harvard Dataverse.                          | [Source](https://dataverse.harvard.edu/dataverse/harvard?q=auction)                                                                             |
+| **Multi-Region MMM eCommerce** | Synthetic multi-region marketing mix modeling dataset with channel spend, impressions, and sales outcomes for evaluating media attribution methods. | [Source](https://figshare.com/articles/dataset/Multi-Region_Marketing_Mix_Modeling_MMM_Dataset_for_Several_eCommerce_Brands/25314841) |
+| **Criteo Counterfactual Learning** | 25M logged interactions with counterfactual propensity scores for offline policy evaluation and counterfactual reasoning in display advertising. | [Source](https://ailab.criteo.com/dataset-release-evaluation-counterfactual-algorithms/) |
+
+---
+
+## Healthcare
+
+Datasets related to healthcare pricing, provider utilization, and organ allocation.
+
+| Dataset              | Description                                                                                                                                                       | URL                                                                 |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| **CMS Hospital Price Transparency** | Machine-readable hospital pricing files mandated by CMS, containing negotiated rates, charges, and payer-specific information across US hospitals. | [Source](https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/hospital-price-transparency-enforcement-activities-and-outcomes) |
+| **OPTN Organ Transplant** | Organ Procurement and Transplantation Network data on organ donation, waiting lists, and transplant outcomes across the US. | [Source](https://optn.transplant.hrsa.gov/data/) |
+| **Medicare Provider Utilization** | CMS data on services and procedures provided by physicians and other healthcare professionals to Medicare beneficiaries, including utilization and payment information. | [Source](https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners) |
 
 ---
 
@@ -305,6 +374,40 @@ Data related to vehicle movement, driving behavior, and GPS tracking.
 | **Natural Driving in Ohio** | Data from vehicles equipped with Advanced Driver Assistance Systems (ADAS) recording naturalistic driving behavior and events. | [Source](https://data.transportation.gov/Automobiles/Advanced-Driver-Assistance-System-ADAS-Equipped-Si/iie8-uenj/about_data) |
 | **NGSIM**                   | Detailed vehicle trajectory data (position, speed, acceleration) from US highways collected for traffic flow modeling.        | [Source](https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Vehicle-Trajector/8ect-6jqj/about_data) |
 | **Grab Driving GPS Traces** | GPS trace data (latitude, longitude, timestamp, accuracy) from drivers using the Grab ride-hailing platform in Southeast Asia. | [Source](https://engineering.grab.com/grab-posisi)                                                        |
+| **HighD Dataset** | Naturalistic vehicle trajectory dataset recorded from German highways using drones, capturing 110K+ vehicles with high positional accuracy for traffic and lane-change analysis. | [Source](https://levelxdata.com/highd-dataset/) |
+| **inD Dataset** | Naturalistic trajectory dataset of road users at German intersections captured by drones, including vehicles, bicyclists, and pedestrians with rich interaction data. | [Source](https://levelxdata.com/ind-dataset/) |
+| **100-Driver Naturalistic Driving** | Large-scale naturalistic driving study tracking 100 drivers with continuous sensor data (GPS, accelerometers, cameras) capturing real-world driving behavior and safety events. | [Source](https://100-driver.github.io/) |
+| **Round Dataset** | Drone-captured vehicle trajectory dataset from roundabouts in Germany for studying yielding behavior and gap acceptance in complex traffic situations. | [Source](https://levelxdata.com/round-dataset/) |
+| **PishguVe Dataset** | Vehicle trajectory dataset providing positional data for driving behavior analysis including lane changes, acceleration, and braking in diverse traffic conditions. | [Source](https://github.com/TeCSAR-UNCC/PishguVe) |
+| **T-Driver Dataset** | GPS trajectories of 10K+ taxis in Beijing over one week, widely used for urban computing, route planning, and traffic analysis. | [Source](https://www.kaggle.com/datasets/arashnic/tdriver) |
+| **COMPASS Connected Car** | Connected vehicle telemetry data including GPS traces, speed, and driving events from real-world driving sessions in the UK. | [Source](https://data.cdrc.ac.uk/dataset/compass-connected-car-vehicle-trajectories-and-behaviours) |
+| **Ithaca365** | Autonomous driving dataset collected along a 15 km route under diverse weather (snow, rain, sun), times (day/night), and traffic conditions with LiDAR and camera data. | [Source](https://ithaca365.mae.cornell.edu/) |
+| **Mobile Century Experiment** | 8 hours of GPS data from 100 vehicles on a 10-mile stretch of I-880 in California, collected to validate mobile phone-based traffic monitoring systems. | [Source](https://github.com/ucbtrans/mcdata) |
+| **Taxi Trajectory Dataset** | GPS trajectory data from taxi trips (e.g., Porto taxis from ECML-PKDD 2015), providing insights into urban mobility patterns and route optimization. | [Source](https://www.kaggle.com/datasets/crailtap/taxi-trajectory/data) |
+| **Citi Bike NYC** | Trip-level data from New York City's bike-sharing system including station locations, trip durations, and user types, updated monthly. | [Source](https://citibikenyc.com/system-data) |
+
+---
+
+## Human Trajectories
+
+Datasets tracking pedestrian and general human movement patterns across various environments.
+
+| Dataset              | Description                                                                                                                                                       | URL                                                                 |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| **OpenTraj** | Benchmark aggregating multiple pedestrian trajectory datasets (ETH, UCY, Stanford Drone, etc.) in a unified format for trajectory prediction research. | [Source](https://github.com/crowdbotp/OpenTraj) |
+| **trajdata** | Unified trajectory data loader and API by NVlabs supporting multiple trajectory datasets with consistent formatting for training and evaluating prediction models. | [Source](https://github.com/NVlabs/trajdata) |
+| **GeoLife GPS Trajectory** | 17,621 trajectories from 182 users (2007-2012) in Beijing, capturing daily mobility patterns including commuting, shopping, and leisure over three years. | [Source](https://www.microsoft.com/en-us/research/publication/geolife-gps-trajectory-dataset-user-guide/) |
+| **GPS Trajectories with Transportation Mode Labels** | GPS trajectory dataset with manually labeled transportation modes (walk, bike, bus, car, subway) for movement pattern classification research. | [Source](https://www.microsoft.com/en-us/research/publication/gps-trajectories-with-transportation-mode-labels/) |
+
+---
+
+## Check-in and Location Data
+
+Datasets capturing user check-ins and location-based interactions at venues and points of interest.
+
+| Dataset              | Description                                                                                                                                                       | URL                                                                 |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| **Foursquare Check-in Datasets** | Collection of Foursquare/Swarm check-in datasets including global check-ins (33M+ from 266K users at 3.6M venues), NYC/Tokyo city datasets, and long-term user activity logs for location-based recommendation and mobility research. | [Source](https://sites.google.com/site/yangdingqi/home/foursquare-dataset) |
 
 ---
 
@@ -341,6 +444,9 @@ Aggregated collections of datasets released by companies or researchers for acad
 | **Yongfeng**        | Personal collection of datasets curated by Yongfeng Zhang, including e-commerce (JD, Alibaba) and recommendation system data.               | [Source](https://www.yongfeng.me/dataset/)                     |
 | **Julian McAuley**  | Collection of datasets curated by Julian McAuley's lab at UCSD, strong focus on reviews (Amazon, Yelp), recommendations, and social network data. | [Source](https://cseweb.ucsd.edu/~jmcauley/datasets.html)      |
 | **Makridakis**      | Time series data used in the Makridakis Competitions (M1-M5) for benchmarking forecasting methods across various domains (economic, demographic, industry). | [Source](https://forecasters.org/resources/time-series-data/)  |
+| **bayesm R Package Datasets** | Collection of marketing and choice datasets bundled with the bayesm R package, including scanner panel data, conjoint studies, and hierarchical Bayes examples. | [Source](https://cran.r-project.org/package=bayesm) |
+| **AMiner DBLP Citation Network** | Large-scale academic citation network with 5M+ papers and 36M+ citation relationships extracted from DBLP, ACM, and MAG for bibliometric and network analysis. | [Source](https://www.aminer.org/citation) |
+| **LIAR** | Benchmark dataset of 12.8K short political statements labeled with six fine-grained truthfulness ratings, speaker metadata, and context for fake news and fact-checking research. | [Source](https://huggingface.co/datasets/ucsbnlp/liar) |
 
 ---
 
@@ -363,8 +469,25 @@ Platforms and conferences hosting data science competitions, often providing uni
 
 ---
 
+## Gaming
+
+Datasets capturing player behavior, strategy, and engagement in digital games and sports analytics.
+
+| Dataset              | Description                                                                                                                                                       | URL                                                                 |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| **Basketball-U, Football-U, Soccer-U** | Player trajectory sequences with xy-coordinates (in yards) from 91 basketball, football, and soccer games each, for multi-agent behavior modeling and sports analytics. | [Source](https://arxiv.org/html/2405.17680) |
+| **CS:GO Agent Data** | Gameplay data from Counter-Strike: Global Offensive capturing AI agent decision-making, enemy detection, and movement control for real-time FPS strategy research. | [Source](https://cs230.stanford.edu/projects_fall_2021/reports/102988723.pdf) |
+| **StarCraftImage** | 3.6M images compiled from StarCraft II replays summarizing game states in RGB and grayscale formats for analyzing complex multi-agent behaviors in strategy games. | [Source](https://arxiv.org/abs/2401.04290) |
+| **Awesome Game Datasets** | Curated list of game-related datasets spanning board games, video games, esports, and game analytics for machine learning research. | [Source](https://github.com/leomaurodesenv/game-datasets) |
+
+---
+
 ## Others
 
 Miscellaneous datasets or categories.
+
+| Dataset              | Description                                                                                                                                                       | URL                                                                 |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| **AI4Animation** | Motion capture and physics-based character animation datasets and tools for training neural network controllers for virtual character movement. | [Source](https://github.com/sebastianstarke/AI4Animation) |
 
 *To add a dataset email me.*
