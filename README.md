@@ -2,12 +2,30 @@
 
 A curated list of business datasets from the fields of Machine Learning, Marketing, Economics, Transportation, Operations, and Computer Science.
 
+> **226 datasets** across 31 categories — last updated March 2026
+
+<details>
+<summary><strong>What's New (Mar 2026)</strong></summary>
+<br>
+
+Added 19 datasets from route choice, gig-economy labor supply, and browsing DDC research:
+
+- **Driving/Mobility** — NYC Yellow Taxi (2009–2013), NYC HVFHV (Uber/Lyft), DiDi GAIA Chengdu, Shanghai Taxi (AIRL), SF Cabspotting, METR-LA, PEMS-BAY
+- **Search/Rec** — KuaiRand, KuaiRec, Tenrec, Baidu-ULTR, TianGong-ST
+- **Commerce** — REES46 Multi-Category Store, OTTO RecSys 2022, MerRec (Mercari)
+- **Music** — Deezer Listening Events, Last.fm 1K
+- **News** — Adressa, Globo.com
+
+</details>
+
 ## Contents
 
 - [LLM Interaction Datasets with Sequential Feedback](#llm-interaction-datasets-with-sequential-feedback)
 - [General e-Commerce](#general-e-commerce)
+- [E-Commerce Sessions](#e-commerce-sessions)
 - [A/B Tests and Experiments](#ab-tests-and-experiments)
 - [Browsing and Search](#browsing-and-search)
+- [Search and Ranking](#search-and-ranking)
 - [Video Search and Recommendation](#video-search-and-recommendation)
 - [Video Engagement](#video-engagement)
 - [News and Media](#news-and-media)
@@ -24,7 +42,8 @@ A curated list of business datasets from the fields of Machine Learning, Marketi
 - [Display Advertising and Sponsered Search Auctions](#display-advertising-and-sponsered-search-auctions)
 - [Healthcare](#healthcare)
 - [Logistics](#logistics)
-- [Driving, Mobility, GPS Traces](#driving-mobility-gps-traces)
+- [Taxi and Ride-Hailing GPS](#taxi-and-ride-hailing-gps)
+- [Driving Behavior and Traffic Sensors](#driving-behavior-and-traffic-sensors)
 - [Human Trajectories](#human-trajectories)
 - [Check-in and Location Data](#check-in-and-location-data)
 - [Housing and Residential Prices](#housing-and-residential-prices)
@@ -49,25 +68,34 @@ Datasets capturing multi-turn dialogues with LLMs, including quality feedback an
 
 ## General e-Commerce
 
-Datasets focusing on online retail transactions, customer behavior, and product information.
+Datasets focusing on online retail transactions and purchase logs.
 
 | Dataset              | Description                                                                                                                                                       | URL                                                                 |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
 | **Brazilian eCommerce** | 100,000 orders (2016-2018) from Olist marketplaces across Brazil, structured in 9 relational tables (customers, orders, payments, products, geolocation, reviews). | [Source](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) |
-| **Open CDP**         | Open-source Customer Data Platform by REES46 aggregating omnichannel interactions (web, app, POS) with AI-driven identity resolution and event tracking (14+ types). | [Source](https://rees46.com/en/datasets)                            |
-| **JD.com (2011-2014)** | Consumer behavior (2011-2014), 15/987 categories, ~2M users, >100k products, 60M+ reviews (positive/negative/overall), purchase behavior, ratings, metadata.    | [Source](https://www.yongfeng.me/dataset/)                            |
-| **JD.com 2020 (MSOM-20)** | Transaction-level data (March 2018) featuring 2.5M customers (457k purchasers) and 31,868 SKUs, emphasizing purchase conversion pathways.                     | [Source](https://connect.informs.org/msom/events/datadriven2020)    |
-| **Alibaba Ads (IJCAI-18)** | 6 billion display ad/click logs over 8 days from 100 million users and 70 million items.                                                                     | [Source](https://tianchi.aliyun.com/dataset/147588)                 |
-| **Alibaba Mobile (6GB)** | Mobile e-commerce user behavior data, including clicks, purchases, user profiles.                                                                                | [Source](https://www.yongfeng.me/dataset/)                            |
-| **Coveo Shopping (SIGIR-21)** | Session-based dataset with 30M+ browsing events, featuring query vectors, image vectors, and description embeddings for recommendation and purchase intent tasks. | [Source](https://github.com/coveooss/SIGIR-ecom-data-challenge#how-to-start) |
-| **Retail Rocket**    | 4.5-month clickstream dataset with 2.76M events (views, carts, purchases) from 1.4M visitors across 417k items; includes a deduplicated version.                 | [Source](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset?select=events.csv) |
-| **Google Merchandise** | 3 months obfuscated GA4 e-commerce data (Nov 2020-Jan 2021), traffic sources, content behavior, transaction data. Via BigQuery Public Datasets.                   | [Source](https://support.google.com/analytics/answer/7586738#)        |
+| **JD.com (2011-2014)** | Consumer behavior (2011-2014), 15/987 categories, ~2M users, >100k products, 60M+ reviews (positive/negative/overall), purchase behavior, ratings, metadata.    | [Source](https://www.yongfeng.me/dataset/) |
+| **JD.com 2020 (MSOM-20)** | Transaction-level data (March 2018) featuring 2.5M customers (457k purchasers) and 31,868 SKUs, emphasizing purchase conversion pathways.                     | [Source](https://connect.informs.org/msom/events/datadriven2020) |
+| **Alibaba Ads (IJCAI-18)** | 6 billion display ad/click logs over 8 days from 100 million users and 70 million items.                                                                     | [Source](https://tianchi.aliyun.com/dataset/147588) |
+| **Alibaba Mobile (6GB)** | Mobile e-commerce user behavior data, including clicks, purchases, user profiles.                                                                                | [Source](https://www.yongfeng.me/dataset/) |
+| **Google Merchandise** | 3 months obfuscated GA4 e-commerce data (Nov 2020-Jan 2021), traffic sources, content behavior, transaction data. Via BigQuery Public Datasets.                   | [Source](https://support.google.com/analytics/answer/7586738#) |
 | **Shopee**           | Dataset from Shopee's Code League competition in 2020.                                                                                                           | [Source](https://www.kaggle.com/datasets/davydev/shopee-code-league-20) |
 | **Flipkart**         | Sales dataset from the Indian e-commerce platform Flipkart.                                                                                                      | [Source](https://www.kaggle.com/datasets/iyumrahul/flipkartsalesdataset?select=Sales.csv) |
-| **Pakistan e-commerce**| Largest retail e-commerce dataset from Pakistan: 500k+ transactions (Mar 2016 - Aug 2018).                                                                       | [Source](https://www.kaggle.com/datasets/zusmani/pakistans-largest-ecommerce-dataset) |
+| **Pakistan e-commerce** | Largest retail e-commerce dataset from Pakistan: 500k+ transactions (Mar 2016 - Aug 2018).                                                                       | [Source](https://www.kaggle.com/datasets/zusmani/pakistans-largest-ecommerce-dataset) |
 | **Instacart**        | 3.4M orders, 206k+ users, 49k+ products (134 aisles, 21 depts), order timing, prior orders. Avg reorder ~59%. (More detailed view).                               | [Source](https://mdporter.github.io/DS6030/other/instacart.html#:~:text=,measure%20of%20time%20between%20orders) |
-| **YOOCHOOSE RecSys 2015** | Session-based click and purchase events from a European e-commerce retailer, used in the RecSys Challenge 2015 for session-based recommendation research. | [Source](https://www.kaggle.com/datasets/chadgostopp/recsys-challenge-2015) |
 | **Open E-Commerce 1.0 (MIT)** | 1.8M Amazon purchase records with demographic attributes (age, gender, location), enabling research on consumer behavior across population segments. | [Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YGLYDY) |
+
+---
+
+## E-Commerce Sessions
+
+Session-based e-commerce datasets capturing multi-event click trails (views, carts, purchases) within user sessions, suited for sequential recommendation and DDC modeling.
+
+| Dataset | Description | URL |
+|---------|-------------|-----|
+| **Open CDP** | Open-source Customer Data Platform by REES46 aggregating omnichannel interactions (web, app, POS) with AI-driven identity resolution and event tracking (14+ types). | [Source](https://rees46.com/en/datasets) |
+| **Coveo Shopping (SIGIR-21)** | Session-based dataset with 30M+ browsing events, featuring query vectors, image vectors, and description embeddings for recommendation and purchase intent tasks. | [Source](https://github.com/coveooss/SIGIR-ecom-data-challenge#how-to-start) |
+| **Retail Rocket** | 4.5-month clickstream dataset with 2.76M events (views, carts, purchases) from 1.4M visitors across 417k items; includes a deduplicated version. | [Source](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset?select=events.csv) |
+| **YOOCHOOSE RecSys 2015** | Session-based click and purchase events from a European e-commerce retailer, used in the RecSys Challenge 2015 for session-based recommendation research. | [Source](https://www.kaggle.com/datasets/chadgostopp/recsys-challenge-2015) |
 | **REES46 Multi-Category Store** | 285M events (view, cart, remove-from-cart, purchase) from October 2019–April 2020 with explicit user_session IDs, millisecond timestamps, product category hierarchies (e.g., "electronics.smartphone"), brand names, and prices. Companion datasets for a cosmetics shop and electronics store have identical schemas. | [Source](https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store) |
 | **OTTO RecSys 2022** | 220M events across 12M sessions from the German e-commerce platform OTTO, with clicks, cart additions, and orders timestamped within sessions. Large, clean, and CC BY 4.0 licensed. Item features are anonymized (IDs only, no categories or prices). | [Source](https://www.kaggle.com/datasets/otto/recsys-dataset) |
 | **MerRec (Mercari)** | Large-scale C2C marketplace dataset from Mercari with millions of users, session IDs, timestamped action types, product taxonomy, and textual attributes over 6 months. CC BY-NC 4.0. Published at KDD 2025. | [Source](https://huggingface.co/datasets/mercari-us/merrec) |
@@ -93,7 +121,7 @@ Datasets resulting from controlled experiments, often used for causal inference 
 
 ## Browsing and Search
 
-Logs detailing user navigation, search queries, and clicks, potentially without purchase or price data.
+Platform clickstream, user behavior logs, and e-commerce browsing data.
 
 | Dataset                       | Description                                                                                                                                         | URL                                                                          |
 |-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
@@ -101,11 +129,6 @@ Logs detailing user navigation, search queries, and clicks, potentially without 
 | **JD.com Search**             | 170,000 users' real search queries (2021-2022) with multi-channel interactions (clicks, carts, purchases), 987 categories, and exposed candidate lists. | [Source](https://github.com/rucliujn/JDsearch)                               |
 | **JD-pretrain-data**          | Encoded search queries, item titles, categories for user intent detection and embedding retrieval (5 TSV files).                                      | [Source](https://github.com/jdcomsearch/jd-pretrain-data)                    |
 | **BestBuy**                   | Mobile website clicks (~42k) for Xbox games: user IDs, queries, product IDs, timestamps, game attributes. ~3.8k unique queries after cleaning.        | [Source](https://www.kaggle.com/c/acm-sf-chapter-hackathon-big/data)         |
-| **Rakuten**                   | E-commerce dataset provided for a SIGIR ecom workshop data task.                                                                                    | [Source](https://sigir-ecom.github.io/ecom2018/data-task.html)               |
-| **Wayfair Search (WANDS)**    | Largest public e-commerce search relevance dataset: 233k human-annotated query-product judgments, 43k products with 40+ attributes (categories, ratings). | [Source](https://github.com/wayfair/WANDS)                                   |
-| **Criteo Display Advertising**| Massive display ad dataset (24 daily files, 342GB total): click feedback, 13 integer features, 26 hashed categorical features.                           | [Source](https://ailab.criteo.com/ressources/)                               |
-| **Avazu**                     | Dataset for predicting click-through rates (CTR) on mobile ad placements.                                                                           | [Source](https://www.kaggle.com/competitions/avazu-ctr-prediction/overview)  |
-| **Yoyi**                      | Dataset related to computational advertising provided by Yoyi Digital.                                                                              | [Source](https://apex.sjtu.edu.cn/datasets/7)                                |
 | **Ele Search**                | Search log dataset from Ele.me (Chinese food delivery platform).                                                                                    | [Source](https://tianchi.aliyun.com/dataset/120281)                          |
 | **Ele Clickstream**           | Clickstream data from Ele.me.                                                                                                                       | [Source](https://tianchi.aliyun.com/dataset/131047)                          |
 | **Alibaba Industrial Dump (150GB)** | Large-scale industrial dataset from Alibaba Cloud.                                                                                                | [Source](https://tianchi.aliyun.com/dataset/81505)                           |
@@ -118,6 +141,20 @@ Logs detailing user navigation, search queries, and clicks, potentially without 
 | **Alibaba User Behavior 2018**| 649M user interactions (clicks, carts, buys) on 25M items over 9 days (2017), CTR, dwell times. (15 structured columns: user profiles, item positions, predicted metrics). | [Source](https://tianchi.aliyun.com/dataset/649)                             |
 | **Alibaba Personalized Re-Ranking** | Mobile shopping user click data on recommended items (30 per instance), item features, user interactions.                                         | [Source](http://yongfeng.me/dataset/)                                         |
 | **Online Shopping Intention** | 12,330 user sessions (1 year), 10 numerical (page metrics, bounce/exit rates, page values, special day proximity) & 8 categorical attributes (OS, browser, traffic type, visitor type, weekend flag, revenue). | [Source](https://www.kaggle.com/datasets/henrysue/online-shoppers-intention) |
+
+---
+
+## Search and Ranking
+
+Search engine logs, query-relevance judgments, SERP click models, and CTR prediction datasets.
+
+| Dataset | Description | URL |
+|---------|-------------|-----|
+| **Rakuten** | E-commerce dataset provided for a SIGIR ecom workshop data task. | [Source](https://sigir-ecom.github.io/ecom2018/data-task.html) |
+| **Wayfair Search (WANDS)** | Largest public e-commerce search relevance dataset: 233k human-annotated query-product judgments, 43k products with 40+ attributes (categories, ratings). | [Source](https://github.com/wayfair/WANDS) |
+| **Criteo Display Advertising** | Massive display ad dataset (24 daily files, 342GB total): click feedback, 13 integer features, 26 hashed categorical features. | [Source](https://ailab.criteo.com/ressources/) |
+| **Avazu** | Dataset for predicting click-through rates (CTR) on mobile ad placements. | [Source](https://www.kaggle.com/competitions/avazu-ctr-prediction/overview) |
+| **Yoyi** | Dataset related to computational advertising provided by Yoyi Digital. | [Source](https://apex.sjtu.edu.cn/datasets/7) |
 | **Yandex Personalized Web Search** | Large-scale search log dataset with 35M queries from 5.7M users, featuring click-through data and user session information for personalized search ranking. | [Source](https://www.kaggle.com/c/yandex-personalized-web-search-challenge) |
 | **Baidu-ULTR** | Largest public SERP dataset: 1.2 billion search sessions with clicks, dwell time, skip behavior, scroll depth, display features (query/document tokens, position, displayed height), and pre-trained BERT embeddings. Expert-annotated subset has 7,008 queries with 397,572 query-doc pairs. Access via WSDM Cup 2023. | [Source](https://github.com/lixsh6/Baidu-ULTR) |
 | **TianGong-ST** | 147,155 Sogou search sessions with queries, top-10 SERPs, clicks, query reformulations, timestamps, and labels from 6 click models (TCM, DBN, PSCM, TACM, UBM, CM). Includes 2,000 sessions with human relevance labels and dwell-time data for modeling temporal attention. | [Source](http://www.thuir.cn/tiangong-st/) |
@@ -377,24 +414,14 @@ Supply-side data focusing on delivery operations, freight, and supply chain mana
 
 ---
 
-## Driving, Mobility, GPS Traces
+## Taxi and Ride-Hailing GPS
 
-Data related to vehicle movement, driving behavior, and GPS tracking.
+GPS trajectory and trip-record datasets from taxis, ride-hailing platforms, and bike-sharing systems.
 
-| Dataset                     | Description                                                                                                                   | URL                                                                                                       |
-|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| **Natural Driving in Ohio** | Data from vehicles equipped with Advanced Driver Assistance Systems (ADAS) recording naturalistic driving behavior and events. | [Source](https://data.transportation.gov/Automobiles/Advanced-Driver-Assistance-System-ADAS-Equipped-Si/iie8-uenj/about_data) |
-| **NGSIM**                   | Detailed vehicle trajectory data (position, speed, acceleration) from US highways collected for traffic flow modeling.        | [Source](https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Vehicle-Trajector/8ect-6jqj/about_data) |
-| **Grab Driving GPS Traces** | GPS trace data (latitude, longitude, timestamp, accuracy) from drivers using the Grab ride-hailing platform in Southeast Asia. | [Source](https://engineering.grab.com/grab-posisi)                                                        |
-| **HighD Dataset** | Naturalistic vehicle trajectory dataset recorded from German highways using drones, capturing 110K+ vehicles with high positional accuracy for traffic and lane-change analysis. | [Source](https://levelxdata.com/highd-dataset/) |
-| **inD Dataset** | Naturalistic trajectory dataset of road users at German intersections captured by drones, including vehicles, bicyclists, and pedestrians with rich interaction data. | [Source](https://levelxdata.com/ind-dataset/) |
-| **100-Driver Naturalistic Driving** | Large-scale naturalistic driving study tracking 100 drivers with continuous sensor data (GPS, accelerometers, cameras) capturing real-world driving behavior and safety events. | [Source](https://100-driver.github.io/) |
-| **Round Dataset** | Drone-captured vehicle trajectory dataset from roundabouts in Germany for studying yielding behavior and gap acceptance in complex traffic situations. | [Source](https://levelxdata.com/round-dataset/) |
-| **PishguVe Dataset** | Vehicle trajectory dataset providing positional data for driving behavior analysis including lane changes, acceleration, and braking in diverse traffic conditions. | [Source](https://github.com/TeCSAR-UNCC/PishguVe) |
+| Dataset | Description | URL |
+|---------|-------------|-----|
+| **Grab Driving GPS Traces** | GPS trace data (latitude, longitude, timestamp, accuracy) from drivers using the Grab ride-hailing platform in Southeast Asia. | [Source](https://engineering.grab.com/grab-posisi) |
 | **T-Driver Dataset** | GPS trajectories of 10K+ taxis in Beijing over one week, widely used for urban computing, route planning, and traffic analysis. | [Source](https://www.kaggle.com/datasets/arashnic/tdriver) |
-| **COMPASS Connected Car** | Connected vehicle telemetry data including GPS traces, speed, and driving events from real-world driving sessions in the UK. | [Source](https://data.cdrc.ac.uk/dataset/compass-connected-car-vehicle-trajectories-and-behaviours) |
-| **Ithaca365** | Autonomous driving dataset collected along a 15 km route under diverse weather (snow, rain, sun), times (day/night), and traffic conditions with LiDAR and camera data. | [Source](https://ithaca365.mae.cornell.edu/) |
-| **Mobile Century Experiment** | 8 hours of GPS data from 100 vehicles on a 10-mile stretch of I-880 in California, collected to validate mobile phone-based traffic monitoring systems. | [Source](https://github.com/ucbtrans/mcdata) |
 | **Taxi Trajectory Dataset** | GPS trajectory data from taxi trips (e.g., Porto taxis from ECML-PKDD 2015), providing insights into urban mobility patterns and route optimization. | [Source](https://www.kaggle.com/datasets/crailtap/taxi-trajectory/data) |
 | **Citi Bike NYC** | Trip-level data from New York City's bike-sharing system including station locations, trip durations, and user types, updated monthly. | [Source](https://citibikenyc.com/system-data) |
 | **NYC Yellow Taxi (2009–2013)** | Trip-level records from ~1B+ NYC yellow taxi trips with anonymized but consistent medallion (vehicle) and hack license (driver) IDs, enabling full shift reconstruction. Key fields: pickup/dropoff datetime, fare, tip, tolls, payment type. The only major public dataset for DDC driver labor supply estimation (used by Buchholz, Shum & Xu 2025). | [Source](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) |
@@ -402,6 +429,25 @@ Data related to vehicle movement, driving behavior, and GPS tracking.
 | **DiDi GAIA Chengdu** | Full GPS trajectories with driver_id and order_id for November 2016 in central Chengdu (~65 km²). Used directly in IRL papers: Safarzadeh & Wang (2024) ran personalized route recommendation via IRL on 14.55M DiDi trajectories; Fan et al. applied recursive logit meta-IRL to it. Requires registration. | [Source](https://gaia.didichuxing.com) |
 | **Shanghai Taxi (Zhao & Liang 2023)** | GPS traces from 10,609 taxis (April 16–21, 2015) at 10-second sampling intervals. Published adversarial IRL (AIRL) route choice model code and data on GitHub, making it the most directly replicable IRL route choice dataset. | [Source](https://github.com/liangchunyaobing/RCM-AIRL) |
 | **San Francisco Cabspotting** | GPS traces from 536 San Francisco taxis over ~30 days (May–June 2008) at sub-10-second sampling. Includes an occupancy flag (1=has fare, 0=vacant) enabling clean trip segmentation without heuristics. Free IEEE DataPort account required. | [Source](https://ieee-dataport.org/open-access/crawdad-epflmobility) |
+
+---
+
+## Driving Behavior and Traffic Sensors
+
+Naturalistic driving studies, highway trajectory datasets, autonomous vehicle data, and loop detector traffic sensor feeds.
+
+| Dataset | Description | URL |
+|---------|-------------|-----|
+| **Natural Driving in Ohio** | Data from vehicles equipped with Advanced Driver Assistance Systems (ADAS) recording naturalistic driving behavior and events. | [Source](https://data.transportation.gov/Automobiles/Advanced-Driver-Assistance-System-ADAS-Equipped-Si/iie8-uenj/about_data) |
+| **NGSIM** | Detailed vehicle trajectory data (position, speed, acceleration) from US highways collected for traffic flow modeling. | [Source](https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Vehicle-Trajector/8ect-6jqj/about_data) |
+| **HighD Dataset** | Naturalistic vehicle trajectory dataset recorded from German highways using drones, capturing 110K+ vehicles with high positional accuracy for traffic and lane-change analysis. | [Source](https://levelxdata.com/highd-dataset/) |
+| **inD Dataset** | Naturalistic trajectory dataset of road users at German intersections captured by drones, including vehicles, bicyclists, and pedestrians with rich interaction data. | [Source](https://levelxdata.com/ind-dataset/) |
+| **100-Driver Naturalistic Driving** | Large-scale naturalistic driving study tracking 100 drivers with continuous sensor data (GPS, accelerometers, cameras) capturing real-world driving behavior and safety events. | [Source](https://100-driver.github.io/) |
+| **Round Dataset** | Drone-captured vehicle trajectory dataset from roundabouts in Germany for studying yielding behavior and gap acceptance in complex traffic situations. | [Source](https://levelxdata.com/round-dataset/) |
+| **PishguVe Dataset** | Vehicle trajectory dataset providing positional data for driving behavior analysis including lane changes, acceleration, and braking in diverse traffic conditions. | [Source](https://github.com/TeCSAR-UNCC/PishguVe) |
+| **COMPASS Connected Car** | Connected vehicle telemetry data including GPS traces, speed, and driving events from real-world driving sessions in the UK. | [Source](https://data.cdrc.ac.uk/dataset/compass-connected-car-vehicle-trajectories-and-behaviours) |
+| **Ithaca365** | Autonomous driving dataset collected along a 15 km route under diverse weather (snow, rain, sun), times (day/night), and traffic conditions with LiDAR and camera data. | [Source](https://ithaca365.mae.cornell.edu/) |
+| **Mobile Century Experiment** | 8 hours of GPS data from 100 vehicles on a 10-mile stretch of I-880 in California, collected to validate mobile phone-based traffic monitoring systems. | [Source](https://github.com/ucbtrans/mcdata) |
 | **METR-LA** | Traffic speed readings from 207 loop detectors on Los Angeles County highways (I-10, I-110, I-405, I-5, US-101) at 5-minute intervals, March–June 2012. Introduced in Li et al.'s DCRNN paper (ICLR 2018); HDF5 file of 34,272 timesteps × 207 sensors. | [Source](https://github.com/liyaguang/DCRNN) |
 | **PEMS-BAY** | Traffic speed data from 325 sensors across San Francisco Bay Area freeways, January–May 2017, at 5-minute resolution. Companion to METR-LA; same HDF5 format (52,116 timesteps × 325 sensors). Both are curated subsets of Caltrans PeMS. | [Source](https://github.com/liyaguang/DCRNN) |
 
