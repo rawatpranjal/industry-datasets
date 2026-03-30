@@ -68,6 +68,9 @@ Datasets focusing on online retail transactions, customer behavior, and product 
 | **Instacart**        | 3.4M orders, 206k+ users, 49k+ products (134 aisles, 21 depts), order timing, prior orders. Avg reorder ~59%. (More detailed view).                               | [Source](https://mdporter.github.io/DS6030/other/instacart.html#:~:text=,measure%20of%20time%20between%20orders) |
 | **YOOCHOOSE RecSys 2015** | Session-based click and purchase events from a European e-commerce retailer, used in the RecSys Challenge 2015 for session-based recommendation research. | [Source](https://www.kaggle.com/datasets/chadgostopp/recsys-challenge-2015) |
 | **Open E-Commerce 1.0 (MIT)** | 1.8M Amazon purchase records with demographic attributes (age, gender, location), enabling research on consumer behavior across population segments. | [Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YGLYDY) |
+| **REES46 Multi-Category Store** | 285M events (view, cart, remove-from-cart, purchase) from October 2019–April 2020 with explicit user_session IDs, millisecond timestamps, product category hierarchies (e.g., "electronics.smartphone"), brand names, and prices. Companion datasets for a cosmetics shop and electronics store have identical schemas. | [Source](https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store) |
+| **OTTO RecSys 2022** | 220M events across 12M sessions from the German e-commerce platform OTTO, with clicks, cart additions, and orders timestamped within sessions. Large, clean, and CC BY 4.0 licensed. Item features are anonymized (IDs only, no categories or prices). | [Source](https://www.kaggle.com/datasets/otto/recsys-dataset) |
+| **MerRec (Mercari)** | Large-scale C2C marketplace dataset from Mercari with millions of users, session IDs, timestamped action types, product taxonomy, and textual attributes over 6 months. CC BY-NC 4.0. Published at KDD 2025. | [Source](https://huggingface.co/datasets/mercari-us/merrec) |
 
 ---
 
@@ -116,6 +119,8 @@ Logs detailing user navigation, search queries, and clicks, potentially without 
 | **Alibaba Personalized Re-Ranking** | Mobile shopping user click data on recommended items (30 per instance), item features, user interactions.                                         | [Source](http://yongfeng.me/dataset/)                                         |
 | **Online Shopping Intention** | 12,330 user sessions (1 year), 10 numerical (page metrics, bounce/exit rates, page values, special day proximity) & 8 categorical attributes (OS, browser, traffic type, visitor type, weekend flag, revenue). | [Source](https://www.kaggle.com/datasets/henrysue/online-shoppers-intention) |
 | **Yandex Personalized Web Search** | Large-scale search log dataset with 35M queries from 5.7M users, featuring click-through data and user session information for personalized search ranking. | [Source](https://www.kaggle.com/c/yandex-personalized-web-search-challenge) |
+| **Baidu-ULTR** | Largest public SERP dataset: 1.2 billion search sessions with clicks, dwell time, skip behavior, scroll depth, display features (query/document tokens, position, displayed height), and pre-trained BERT embeddings. Expert-annotated subset has 7,008 queries with 397,572 query-doc pairs. Access via WSDM Cup 2023. | [Source](https://github.com/lixsh6/Baidu-ULTR) |
+| **TianGong-ST** | 147,155 Sogou search sessions with queries, top-10 SERPs, clicks, query reformulations, timestamps, and labels from 6 click models (TCM, DBN, PSCM, TACM, UBM, CM). Includes 2,000 sessions with human relevance labels and dwell-time data for modeling temporal attention. | [Source](http://www.thuir.cn/tiangong-st/) |
 
 ---
 
@@ -127,6 +132,9 @@ User interaction data specifically related to online video platforms.
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | **MicroLens** | Micro-video recommendation dataset with 1 billion interactions from 34 million users on 1 million videos, including raw multimodal data (titles, audio, full videos). | [Source](https://github.com/westlake-repl/MicroLens) |
 | **KuaiSAR**   | Unified Search And Recommendation dataset from Kuaishou: 5M search actions, 14.6M recommendation events from 25k users over 19 days (8 interaction types).        | [Source](https://kuaisar.github.io/)              |
+| **KuaiRand** | Short-video recommendation dataset from Kuaishou with 12 feedback signals (click, like, follow, comment, forward, hate, long_view, play_time_ms, etc.) and randomly exposed items inserted into normal feeds, enabling off-policy evaluation and causal inference. KuaiRand-27K has 27K+ users and 32M+ interactions. | [Source](https://zenodo.org/records/10439422) |
+| **KuaiRec** | Near-fully-observed user-item interaction matrix (99.6% density) for 1,411 users × 3,327 short videos from Kuaishou, with watch ratio, like, follow, click, hate, comment, and forward signals. Unique for counterfactual evaluation due to near-complete observation. | [Source](https://github.com/chongminggao/KuaiRec) |
+| **Tenrec** | Tencent recommendation dataset spanning 4 scenarios across 2 feed apps (QK-video, QK-article, QB-video, QB-article) with 5M users and 140M interactions including clicks, likes, shares, follows, reads, watch times, and true negative feedback (exposed but not clicked). | [Source](https://tenrec0.github.io/) |
 
 ---
 
@@ -152,6 +160,8 @@ Datasets related to news consumption, media recommendations, and content engagem
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
 | **MIND (Microsoft News Dataset)** | Large-scale news recommendation dataset with 1M+ users and 160K+ English news articles, including click logs, impressions, and article content for personalization research. | [Source](https://msnews.github.io/) |
 | **ContentWise Impressions** | Interaction logs from an OTT media service with 10M+ impressions, explicit and implicit user feedback, and recommendation context for evaluating recommendation algorithms. | [Source](https://github.com/ContentWise/contentwise-impressions) |
+| **Adressa** | Norwegian news reading dataset with 27M clicks from 3M users across 48K articles over 10 weeks. Distinctive feature: activeTime (dwell time) per article read, plus explicit session start/end boundaries. Light versions freely downloadable; full version requires contacting NTNU. | [Source](https://reclab.idi.ntnu.no/dataset/) |
+| **Globo.com (G1 News Portal)** | ~1M user sessions with 3M clicks across 46K articles from the Brazilian G1 news portal, with articles represented as 300-dim word2vec embeddings. Used for the CHAMELEON meta-architecture for news recommendation. | [Source](https://www.kaggle.com/datasets/gspmoreira/news-portal-user-interactions-by-globocom) |
 
 ---
 
@@ -295,6 +305,8 @@ Datasets focusing on music listening behavior, sales, and reviews.
 | **Spotify**             | Various datasets released by Spotify research, including the Million Playlist Dataset and challenge datasets.                  | [Source](https://research.atspotify.com/datasets/)                  |
 | **Bandcamp Music sales**| Dataset containing music sales data (digital/physical) from the Bandcamp platform.                                         | [Source](https://components.one/datasets/bandcamp-sales)            |
 | **Yahoo Music Reviews** | User ratings and play counts for musical tracks/artists from the Yahoo Webscope collection (e.g., 1 billion play counts).     | [Source](https://webscope.sandbox.yahoo.com/catalog.php?datatype=c) |
+| **Deezer Listening Events** | 700M+ timestamped listening events from 3.4M users across 50K songs (March–August 2022), with pre-trained song embeddings. Sessionizable via timestamps. Published at RecSys 2024. | [Source](https://zenodo.org/records/13890194) |
+| **Last.fm 1K** | ~19.1M timestamped scrobbles from ~1,000 users with artist and song metadata, sessionizable via inactivity thresholds. Widely used for sequential listening and session-based recommendation research. | [Source](https://zenodo.org/records/6090214) |
 
 ---
 
@@ -385,6 +397,13 @@ Data related to vehicle movement, driving behavior, and GPS tracking.
 | **Mobile Century Experiment** | 8 hours of GPS data from 100 vehicles on a 10-mile stretch of I-880 in California, collected to validate mobile phone-based traffic monitoring systems. | [Source](https://github.com/ucbtrans/mcdata) |
 | **Taxi Trajectory Dataset** | GPS trajectory data from taxi trips (e.g., Porto taxis from ECML-PKDD 2015), providing insights into urban mobility patterns and route optimization. | [Source](https://www.kaggle.com/datasets/crailtap/taxi-trajectory/data) |
 | **Citi Bike NYC** | Trip-level data from New York City's bike-sharing system including station locations, trip durations, and user types, updated monthly. | [Source](https://citibikenyc.com/system-data) |
+| **NYC Yellow Taxi (2009–2013)** | Trip-level records from ~1B+ NYC yellow taxi trips with anonymized but consistent medallion (vehicle) and hack license (driver) IDs, enabling full shift reconstruction. Key fields: pickup/dropoff datetime, fare, tip, tolls, payment type. The only major public dataset for DDC driver labor supply estimation (used by Buchholz, Shum & Xu 2025). | [Source](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) |
+| **NYC HVFHV (Uber/Lyft)** | High-volume for-hire vehicle trip records from NYC (Feb 2019–present), ~20M trips/month. Fields include driver_pay, base_passenger_fare, tips, tolls, pickup/dropoff taxi zones. No driver identifier — shift reconstruction is impossible, but useful for earnings analysis and demand modeling. | [Source](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) |
+| **DiDi GAIA Chengdu** | Full GPS trajectories with driver_id and order_id for November 2016 in central Chengdu (~65 km²). Used directly in IRL papers: Safarzadeh & Wang (2024) ran personalized route recommendation via IRL on 14.55M DiDi trajectories; Fan et al. applied recursive logit meta-IRL to it. Requires registration. | [Source](https://gaia.didichuxing.com) |
+| **Shanghai Taxi (Zhao & Liang 2023)** | GPS traces from 10,609 taxis (April 16–21, 2015) at 10-second sampling intervals. Published adversarial IRL (AIRL) route choice model code and data on GitHub, making it the most directly replicable IRL route choice dataset. | [Source](https://github.com/liangchunyaobing/RCM-AIRL) |
+| **San Francisco Cabspotting** | GPS traces from 536 San Francisco taxis over ~30 days (May–June 2008) at sub-10-second sampling. Includes an occupancy flag (1=has fare, 0=vacant) enabling clean trip segmentation without heuristics. Free IEEE DataPort account required. | [Source](https://ieee-dataport.org/open-access/crawdad-epflmobility) |
+| **METR-LA** | Traffic speed readings from 207 loop detectors on Los Angeles County highways (I-10, I-110, I-405, I-5, US-101) at 5-minute intervals, March–June 2012. Introduced in Li et al.'s DCRNN paper (ICLR 2018); HDF5 file of 34,272 timesteps × 207 sensors. | [Source](https://github.com/liyaguang/DCRNN) |
+| **PEMS-BAY** | Traffic speed data from 325 sensors across San Francisco Bay Area freeways, January–May 2017, at 5-minute resolution. Companion to METR-LA; same HDF5 format (52,116 timesteps × 325 sensors). Both are curated subsets of Caltrans PeMS. | [Source](https://github.com/liyaguang/DCRNN) |
 
 ---
 
