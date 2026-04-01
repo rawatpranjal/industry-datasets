@@ -2,7 +2,24 @@
 
 A curated list of business datasets from the fields of Machine Learning, Marketing, Economics, Transportation, Operations, and Computer Science.
 
-> **226 datasets** across 31 categories — last updated March 2026
+> **240 datasets** across 31 categories — last updated April 2026
+
+<details>
+<summary><strong>What's New (Apr 2026)</strong></summary>
+<br>
+
+Added 14 industrial datasets for DDC/IRL estimation:
+
+- **Healthcare** — MIMIC-IV, eICU, ICU-Sepsis MDP
+- **Discrete Economic Choices** — Igami HDD Industry, Collard-Wexler Concrete, EPA CEMS Emissions, USDA Cropland Data Layer
+- **Taxi/Ride-Hailing** — Chicago Taxi Trips, Bay Wheels
+- **Travel** — Airline DB1B Tickets
+- **Financial** — FDIC Summary of Deposits
+- **Auctions** — FCC Spectrum Auctions
+- **Grocery** — Aguirregabiria Supermarket
+- **Fashion** — H&M Personalized Fashion
+
+</details>
 
 <details>
 <summary><strong>What's New (Mar 2026)</strong></summary>
@@ -260,6 +277,7 @@ Datasets containing prices and purchases from supermarkets or grocery stores, of
 | **Israeli Grocery** | Grocery purchase data potentially from the Shufersal chain in Israel, possibly scraped product listings. | [Source](https://www.kaggle.com/datasets/arielpazsawicki/kimonaim?select=shufersalist.db)                 |
 | **Brazilian store** | Sales data for a chain of stores in Brazil.                                                              | [Source](https://www.kaggle.com/datasets/marcio486/sales-data-for-a-chain-of-brazilian-stores)          |
 | **Dominiks Soft drinks** | Weekly scanner data (prices, volume, display/feature ads) focusing on soft drink purchases from Dominick's Finer Foods (Chicago). | [Source](https://www.chicagobooth.edu/research/kilts/research-data/dominicks)                           |
+| **Aguirregabiria Supermarket** | Panel of prices, sales, and inventories for 3,742 products in a single supermarket, used for dynamic pricing and inventory management models (Aguirregabiria 1999). | [Source](http://individual.utoronto.ca/vaguirre/data/data.html) |
 
 ---
 
@@ -271,6 +289,7 @@ Datasets focusing on banking transactions or financial product purchases.
 |-----------------------------------------------|----------------------------------------------------------------------|-------------------------------------------|
 | **Hashed Multimodal Banking Transactions**    | Dataset containing hashed banking transactions and product purchases. | [Source](https://github.com/dzhambo/mbd) |
 | **IEEE-CIS Fraud Detection** | 590K+ payment transactions with identity and device features from the IEEE-CIS Kaggle competition for fraud detection research. | [Source](https://www.kaggle.com/competitions/ieee-fraud-detection) |
+| **FDIC Summary of Deposits** | Annual survey of all FDIC-insured branch deposits (1994–present) with branch addresses, GPS coordinates, deposit amounts, and establishment dates. Public domain. | [Source](https://www.fdic.gov/bank-financial-reports/summary-deposits) |
 
 ---
 
@@ -284,6 +303,7 @@ Datasets specific to the fashion industry, including products, styles, and user 
 | **Diginetica Fashion**| Dataset used in a Codalab competition related to fashion e-commerce, likely involving clickstream or purchase data.       | [Source](https://competitions.codalab.org/competitions/11161) |
 | **Dressipi Fashion**| Dataset from fashion styling service Dressipi used in the RecSys Challenge 2022, including session interactions and item features. | [Source](http://www.recsyschallenge.com/2022/dataset.html)     |
 | **Fashion-MNIST**   | 70,000 28x28 grayscale images of 10 fashion categories (T-shirt, trouser, pullover, etc.), intended as a MNIST replacement. | [Source](https://github.com/zalandoresearch/fashion-mnist)    |
+| **H&M Personalized Fashion** | 1.3M customers, 105K articles over 2 years (2018–2020) with transaction timestamps, product metadata (type, color, department), and customer demographics. ~5 GB. | [Source](https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations) |
 
 ---
 
@@ -310,6 +330,10 @@ Datasets used in structural econometric models of discrete decision-making under
 | **Career Decisions of Young Men** | NLSY panel data tracking young men's educational and occupational choices over time, widely used for dynamic discrete choice estimation (Keane & Wolpin 1997). | [Source](https://github.com/lindamaok899/student-project-lindamaok899) |
 | **Bus Engine Replacement Data** | Harold Zurcher's bus engine mileage and replacement decisions, the canonical dataset for dynamic discrete choice models (Rust 1987). | [Source](https://www.kaggle.com/datasets/erichschulman/bus1234.csv) |
 | **The Discrete Choice Data Bank** | Curated collection of publicly available discrete choice datasets spanning transport, health economics, energy, and consumer behavior. | [Source](https://github.com/alvarogutyerrez/TheDiscreteChoiceDataBank) |
+| **Igami (2018) HDD Industry** | Hard disk drive industry panel (1976–1998) tracking firm entry, exit, and technology adoption decisions. AEA replication package. | [Source](https://www.openicpsr.org/openicpsr/project/114348/version/V1/view) |
+| **Collard-Wexler (2014) Concrete** | Entry/exit and demand data for ready-mix concrete plants across US local markets. AEA replication package. | [Source](https://doi.org/10.3886/E114426V1) |
+| **EPA CEMS Emissions** | Hourly plant-unit-level emissions (SO₂, CO₂, NOₓ), gross load, and heat input for US power plants (1995–present). Billions of rows. Public domain. | [Source](https://campd.epa.gov/data/bulk-data-files) |
+| **USDA Cropland Data Layer** | Annual 30-meter resolution crop-type raster for the continental US (2008–present), used for crop choice and land-use models. Public domain (CC0). | [Source](https://nassgeodata.gmu.edu/CropScape/) |
 
 ---
 
@@ -329,6 +353,7 @@ Data related to travel bookings, transactions, delays, and recommendations.
 | **Chicago TNC Trips** | Publicly released ride-hailing trip records from the City of Chicago, including pickup/dropoff areas, timestamps, fares, and trip durations. | [Source](https://data.cityofchicago.org/Transportation/Transportation-Network-Providers-Trips-2018-2022-/m6dm-c72p) |
 | **Uber Movement** | Aggregated travel time and speed data across major global cities, derived from Uber trip data for urban transportation analysis and planning. | [Source](https://movement.uber.com/) |
 | **TrajAir** | General aviation trajectory dataset capturing aircraft operations around a non-towered airport, with recorded trajectories and corresponding weather conditions. | [Source](https://theairlab.org/trajair/) |
+| **Airline DB1B Tickets** | 10% sample of all US domestic airline tickets (quarterly, 1993–present). Routes, fares, carriers, passengers across Coupon/Market/Ticket tables. Public domain. | [Source](https://www.transtats.bts.gov/Tables.asp?DB_ID=125) |
 
 ---
 
@@ -360,6 +385,7 @@ Data from online auction platforms, public procurement processes, or tender data
 | **Art Auction**      | Data from the "Artists for Lahaina" benefit art auction in 2023.                       | [Source](https://www.kaggle.com/datasets/quillen/artists-for-lahaina-2023)  |
 | **Used Car Auction** | Listings data from PakWheels, a Pakistani used car marketplace/auction site.          | [Source](https://www.kaggle.com/datasets/asimzahid/pakistans-largest-pakwheels-automobiles-listings) |
 | **Bidoo**            | Data from closed penny auctions on the Bidoo platform.                                | [Source](https://www.kaggle.com/datasets/federicominutoli/bidoo-closed-auctions) |
+| **FCC Spectrum Auctions** | Round-by-round bid data from 87+ FCC wireless spectrum auctions since 1994, with bidder identities, amounts, and license details. Public domain. | [Source](https://auctiondata.fcc.gov/) |
 
 ---
 
@@ -393,6 +419,9 @@ Datasets related to healthcare pricing, provider utilization, and organ allocati
 | **CMS Hospital Price Transparency** | Machine-readable hospital pricing files mandated by CMS, containing negotiated rates, charges, and payer-specific information across US hospitals. | [Source](https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/hospital-price-transparency-enforcement-activities-and-outcomes) |
 | **OPTN Organ Transplant** | Organ Procurement and Transplantation Network data on organ donation, waiting lists, and transplant outcomes across the US. | [Source](https://optn.transplant.hrsa.gov/data/) |
 | **Medicare Provider Utilization** | CMS data on services and procedures provided by physicians and other healthcare professionals to Medicare beneficiaries, including utilization and payment information. | [Source](https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners) |
+| **MIMIC-IV** | 65K+ ICU admissions at Beth Israel Deaconess Medical Center (2008–2019), with vitals, labs, medications, and procedures. ~7-8 GB. Credentialed PhysioNet access required. | [Source](https://physionet.org/content/mimiciv/3.1/) |
+| **eICU** | 200K+ ICU admissions from 200+ US hospitals (2014–2015), ~3 GB. Multi-center complement to MIMIC with similar clinical variables. Credentialed PhysioNet access required. | [Source](https://physionet.org/content/eicu-crd/2.0/) |
+| **ICU-Sepsis MDP** | Abstracted sepsis treatment MDP with 750 discrete states, 25 actions (IV fluids × vasopressors), and transition/reward matrices derived from MIMIC-III. Includes OpenAI Gym environment. | [Source](https://github.com/icu-sepsis/icu-sepsis) |
 
 ---
 
@@ -429,6 +458,8 @@ GPS trajectory and trip-record datasets from taxis, ride-hailing platforms, and 
 | **DiDi GAIA Chengdu** | Full GPS trajectories with driver_id and order_id for November 2016 in central Chengdu (~65 km²). Used directly in IRL papers: Safarzadeh & Wang (2024) ran personalized route recommendation via IRL on 14.55M DiDi trajectories; Fan et al. applied recursive logit meta-IRL to it. Requires registration. | [Source](https://gaia.didichuxing.com) |
 | **Shanghai Taxi (Zhao & Liang 2023)** | GPS traces from 10,609 taxis (April 16–21, 2015) at 10-second sampling intervals. Published adversarial IRL (AIRL) route choice model code and data on GitHub, making it the most directly replicable IRL route choice dataset. | [Source](https://github.com/liangchunyaobing/RCM-AIRL) |
 | **San Francisco Cabspotting** | GPS traces from 536 San Francisco taxis over ~30 days (May–June 2008) at sub-10-second sampling. Includes an occupancy flag (1=has fare, 0=vacant) enabling clean trip segmentation without heuristics. Free IEEE DataPort account required. | [Source](https://ieee-dataport.org/open-access/crawdad-epflmobility) |
+| **Chicago Taxi Trips** | ~200M taxi trips in Chicago (2013–2023) with timestamps, fares, trip distance, and community-area-level locations. CC BY 4.0. | [Source](https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew) |
+| **Bay Wheels (Bay Area)** | Monthly trip-level bike-sharing data from the San Francisco Bay Area (2013–present), similar structure to Citi Bike NYC. | [Source](https://www.lyft.com/bikes/bay-wheels/system-data) |
 
 ---
 
