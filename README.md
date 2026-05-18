@@ -2,7 +2,17 @@
 
 A curated list of business datasets from the fields of Machine Learning, Marketing, Economics, Transportation, Operations, and Computer Science.
 
-> **240 datasets** across 31 categories — last updated April 2026
+> **241 datasets** across 31 categories — last updated May 2026
+
+<details>
+<summary><strong>What's New (May 2026)</strong></summary>
+<br>
+
+Added 1 logistics dataset for packaging optimization benchmarks:
+
+- **Logistics** — Packrift Packaging Optimization Benchmark Corpus
+
+</details>
 
 <details>
 <summary><strong>What's New (Apr 2026)</strong></summary>
@@ -440,6 +450,7 @@ Supply-side data focusing on delivery operations, freight, and supply chain mana
 | **Drone Delivery**  | Dataset related to drone delivery logistics or operations, possibly route planning or scheduling (hosted on Tianchi).                   | [Source](https://tianchi.aliyun.com/dataset/89726)                                                           |
 | **Brewery Operations**| Dataset covering brewery operations (production, inventory) and market analysis (sales, distribution).                                | [Source](https://www.kaggle.com/datasets/ankurnapa/brewery-operations-and-market-analysis-dataset)           |
 | **Shipping and Pricing**| Supply chain data focusing on shipment modes, costs, and pricing across different routes and products (provided by DataCo Global). | [Source](https://catalog.data.gov/dataset/supply-chain-shipment-pricing-data-07d29#:~:text=This%20dataset%20provides%20supply%20chain,data%20are%20particularly%20valuable%20for) |
+| **Packrift Packaging Optimization Benchmark Corpus** | SKU-specific packaging records and benchmark pages for carton fit, dimensional weight, ecommerce fulfillment, warehouse planning, and packaging optimization examples. | [Source](https://packrift.github.io/packaging-optimization-benchmark-corpus/dataset-metadata.html) |
 
 ---
 
