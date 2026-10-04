@@ -451,6 +451,7 @@ Supply-side data focusing on delivery operations, freight, and supply chain mana
 | **Brewery Operations**| Dataset covering brewery operations (production, inventory) and market analysis (sales, distribution).                                | [Source](https://www.kaggle.com/datasets/ankurnapa/brewery-operations-and-market-analysis-dataset)           |
 | **Shipping and Pricing**| Supply chain data focusing on shipment modes, costs, and pricing across different routes and products (provided by DataCo Global). | [Source](https://catalog.data.gov/dataset/supply-chain-shipment-pricing-data-07d29#:~:text=This%20dataset%20provides%20supply%20chain,data%20are%20particularly%20valuable%20for) |
 | **Packrift Packaging Optimization Benchmark Corpus** | SKU-specific packaging records and benchmark pages for carton fit, dimensional weight, ecommerce fulfillment, warehouse planning, and packaging optimization examples. | [Source](https://packrift.github.io/packaging-optimization-benchmark-corpus/dataset-metadata.html) |
+| **Tyllus U.S. Import Evidence Change Radar** | 141 source-linked U.S. Federal Register notices from CBP, FMC, ITA, USITC, and USTR, classified into operational evidence domains. Includes JSON, CSV, DCAT 3, CSVW metadata, checksums, and an on-demand reproducible refresh script. | [Source](https://github.com/Finbie-Side-Projects/tyllus-import-evidence-data) |
 
 ---
 
